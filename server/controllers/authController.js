@@ -53,7 +53,7 @@ passport.use(
             displayName: profile.username,
           });
         }
-        return done(null, user);
+        return done();
       } catch (error) {
         return done(error, null);
       }
