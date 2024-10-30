@@ -10,12 +10,12 @@ const PORT = process.env.PORT || 5000;
 // Conexión a la base de datos
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://ealexandergarcia.github.io/login",
+    credentials: true,
+  })
+);
 
 // Middleware de sesiones
 app.use(session({
