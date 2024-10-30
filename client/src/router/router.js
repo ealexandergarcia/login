@@ -10,7 +10,7 @@ const routes = [
 
 // Creación del router
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL), // Cambia esto según sea necesario
+  history: createWebHistory('/login/'), // Usa '/login/' si es necesario
   routes,
 });
 
