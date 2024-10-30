@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center h-screen">
-    <h1 class="text-4xl font-bold">¡Bienvenido, {{ username }}!</h1>
+    <h1 class="text-4xl font-bold">¡Bienvenido, Usuario!</h1>
     <p class="mt-4 text-lg">Has iniciado sesión correctamente.</p>
   </div>
 </template>
