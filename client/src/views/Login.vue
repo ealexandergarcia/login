@@ -41,9 +41,9 @@ export default {
     // Función para redirigir a la ruta de autenticación
     const loginWithProvider = (provider) => {
       const providerUrls = {
-        facebook: "login-3n994zwtz-ealexandergarcias-projects.vercel.app/auth/facebook",
-        google: "login-3n994zwtz-ealexandergarcias-projects.vercel.app/auth/google",
-        discord: "login-3n994zwtz-ealexandergarcias-projects.vercel.app/auth/discord",
+        facebook: "login-chi-pearl.vercel.app/auth/facebook",
+        google: "login-chi-pearl.vercel.app/auth/google",
+        discord: "login-chi-pearl.vercel.app/auth/discord",
       };
       // Redirige a la ruta del proveedor correspondiente
       window.location.href = providerUrls[provider];
