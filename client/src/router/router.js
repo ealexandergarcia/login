@@ -10,7 +10,7 @@ const routes = [
 
 // Creación del router
 const router = createRouter({
-  history: createWebHistory('/#/'), // Usa '/login/' si es necesario
+  history: createWebHistory('/#/login'), // Usa '/login/' si es necesario
   routes,
 });
 
