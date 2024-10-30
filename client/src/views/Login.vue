@@ -32,7 +32,7 @@ import { useRouter } from "vue-router";
 
 import googleImg from "../assets/img/google.svg";
 import facebookImg from "../assets/img/facebook.svg";
-import appleImg from "../assets/img/apple.svg";
+import appleImg from "../assets/img/apple.png";
 
 export default {
   setup() {
