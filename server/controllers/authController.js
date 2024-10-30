@@ -39,7 +39,7 @@ passport.use(
     {
       clientID: process.env.DISCORD_CLIENT_ID,
       clientSecret: process.env.DISCORD_CLIENT_SECRET,
-      callbackURL: "/auth/discord/callback",
+      callbackURL: "http://login-chi-pearl.vercel.app/auth/discord/callback",
       scope: ["identify", "email"],
     },
     async (accessToken, refreshToken, profile, done) => {
