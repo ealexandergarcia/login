@@ -18,7 +18,7 @@ export default {
   methods: {
     async fetchUser() {
       try {
-        const response = await fetch("login-chi-pearl.vercel.app/auth/user", {
+        const response = await fetch("http://login-chi-pearl.vercel.app/auth/user", {
           credentials: "include", // Incluye la cookie de sesión
         });
         if (response.ok) {
