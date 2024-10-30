@@ -14,12 +14,17 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        // Utiliza findOneOrCreate para encontrar o crear el usuario
-        const user = await User.findOneOrCreate({
-          googleId: profile.id,
-          email: profile.emails[0].value,
-          displayName: profile.displayName,
-        });
+        // Busca el usuario por su ID de Google
+        let user = await User.findOne({ googleId: profile.id });
+        
+        // Si no existe, crea uno nuevo
+        if (!user) {
+          user = await User.create({
+            googleId: profile.id,
+            email: profile.emails[0].value,
+            displayName: profile.displayName,
+          });
+        }
         return done(null, user);
       } catch (error) {
         return done(error, null);
@@ -39,12 +44,15 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        // Utiliza findOneOrCreate para encontrar o crear el usuario
-        const user = await User.findOneOrCreate({
-          discordId: profile.id,
-          email: profile.email,
-          displayName: profile.username,
-        });
+        let user = await User.findOne({ discordId: profile.id });
+
+        if (!user) {
+          user = await User.create({
+            discordId: profile.id,
+            email: profile.email,
+            displayName: profile.username,
+          });
+        }
         return done(null, user);
       } catch (error) {
         return done(error, null);
@@ -64,12 +72,15 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        // Utiliza findOneOrCreate para encontrar o crear el usuario
-        const user = await User.findOneOrCreate({
-          facebookId: profile.id,
-          email: profile.emails[0].value,
-          displayName: profile.displayName,
-        });
+        let user = await User.findOne({ facebookId: profile.id });
+
+        if (!user) {
+          user = await User.create({
+            facebookId: profile.id,
+            email: profile.emails ? profile.emails[0].value : null,
+            displayName: profile.displayName,
+          });
+        }
         return done(null, user);
       } catch (error) {
         return done(error, null);
