@@ -18,7 +18,7 @@ export default {
   methods: {
     async fetchUser() {
       try {
-        const response = await fetch("http://localhost:5000/auth/user", {
+        const response = await fetch("login-3n994zwtz-ealexandergarcias-projects.vercel.app/auth/user", {
           credentials: "include", // Incluye la cookie de sesión
         });
         if (response.ok) {
